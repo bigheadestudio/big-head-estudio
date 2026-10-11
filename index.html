@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agenda do Big Head Estúdio em Mauá. Consulte os horários disponíveis para ensaios e fale pelo WhatsApp.">
+  <meta name="theme-color" content="#050505">
+  <title>Agenda | Big Head Estúdio</title>
+  <link rel="icon" href="assets/bh-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="agenda">
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="Big Head Estúdio — Agenda">
+        <img class="brand-logo" src="assets/logo-oficial-2026.webp" alt="Logotipo Big Head Estúdio">
+        <span class="brand-text"><strong>BIG HEAD ESTÚDIO</strong><span>Música · Mix · Criação</span></span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link active" href="index.html">Agenda</a>
+        <a class="nav-link" href="portfolio.html">Portfólio</a>
+        <a class="nav-link nav-whatsapp js-whatsapp" href="#"><img src="assets/whatsapp-contact.svg" alt="">WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-agenda">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="eyebrow">Agenda de ensaios · Big Head Estúdio</div>
+          <h1>Seu horário.<br><span>Seu som.</span></h1>
+          <p class="hero-copy">Consulte o calendário mensal, veja o que está livre ou reservado e fale direto com o estúdio para solicitar seu ensaio.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#agenda">Ver disponibilidade</a>
+            <a class="btn btn-ghost" href="portfolio.html">Conhecer o estúdio →</a>
+          </div>
+        </div>
+        <div class="hero-emblem" aria-hidden="true">
+          <div class="soundwave wave-left"></div>
+          <img src="assets/logo-oficial-2026.webp" alt="">
+          <div class="soundwave wave-right"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="container agenda-section">
+      <div class="section-ribbon"><span>AGENDA ONLINE</span><span>ATUALIZADA PELO GOOGLE CALENDAR</span></div>
+      <div id="demoBanner" class="demo-banner">Prévia de layout: a integração com o Google Calendar ainda não foi configurada neste arquivo. Os bloqueios exibidos abaixo são apenas demonstrativos.</div>
+      <div class="calendar-shell">
+        <div class="calendar-card">
+          <div class="calendar-toolbar">
+            <div id="calendarTitle" class="calendar-title">Mês</div>
+            <button id="todayBtn" class="icon-btn" type="button" title="Hoje">●</button>
+            <button id="prevMonth" class="icon-btn" type="button" aria-label="Mês anterior">←</button>
+            <button id="nextMonth" class="icon-btn" type="button" aria-label="Próximo mês">→</button>
+          </div>
+          <div class="calendar-legend" aria-label="Legenda do calendário">
+            <span><i class="legend-dot free"></i>Livre</span>
+            <span><i class="legend-dot partial"></i>Parcial</span>
+            <span><i class="legend-dot full"></i>Reservado</span>
+          </div>
+          <div class="weekdays" aria-hidden="true">
+            <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+          </div>
+          <div id="calendarGrid" class="calendar-grid" aria-label="Calendário mensal"></div>
+        </div>
+
+        <aside class="day-card" aria-live="polite">
+          <div class="day-card-brand"><img src="assets/logo-oficial-2026.webp" alt=""><span>HORÁRIOS</span></div>
+          <h3 id="selectedDateTitle">Selecione um dia</h3>
+          <p id="selectedDateSubtitle" class="day-subtitle">Clique em uma data no calendário para consultar os horários.</p>
+          <div id="slots" class="slots"></div>
+          <a id="dayWhatsapp" class="btn btn-whatsapp day-cta js-whatsapp" href="#"><img src="assets/whatsapp-contact.svg" alt="">Consultar pelo WhatsApp</a>
+          <p class="day-note">A solicitação pelo WhatsApp não confirma automaticamente a reserva. O horário é confirmado pelo estúdio.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-head">
+          <div><div class="eyebrow">Como funciona</div><h2>Agenda simples.<br>Dados protegidos.</h2></div>
+          <p>O site mostra apenas a disponibilidade. Nomes de bandas, contatos e observações permanecem na agenda administrativa do Big Head Estúdio.</p>
+        </div>
+        <div class="grid-3">
+          <article class="content-card"><div class="card-kicker">01</div><h3>Escolha o dia</h3><p>Navegue pelo calendário mensal e abra a data desejada.</p></article>
+          <article class="content-card"><div class="card-kicker">02</div><h3>Confira os horários</h3><p>Horários ocupados aparecem apenas como “Reservado”. Os demais ficam disponíveis para consulta.</p></article>
+          <article class="content-card"><div class="card-kicker">03</div><h3>Chame no WhatsApp</h3><p>Selecione um horário livre e envie uma mensagem pronta diretamente para o estúdio.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="review-cta">
+        <img class="review-logo" src="assets/logo-oficial-2026.webp" alt="">
+        <div><h2>Já ensaiou ou gravou com a gente?</h2><p>Sua avaliação ajuda outros músicos a conhecerem o Big Head Estúdio e fortalece a cena independente.</p></div>
+        <a class="btn js-review" href="#" target="_blank" rel="noopener">★ Avaliar no Google</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="assets/logo-oficial-2026.webp" alt="Big Head Estúdio"><div><strong>Big Head Estúdio</strong><br>Rua Canadá, 35 — Parque das Américas — Mauá/SP<br><span>Desde 2020 · Música · Mix · Criação</span></div></div>
+      <div class="footer-links">
+        <a class="footer-whatsapp js-whatsapp" href="#"><img src="assets/whatsapp-contact.svg" alt="">WhatsApp</a>
+        <a class="js-instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="js-review" href="#" target="_blank" rel="noopener">Avaliar no Google</a>
+        <a class="js-maps" href="#" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp js-whatsapp" href="#" aria-label="Falar no WhatsApp"><img src="assets/whatsapp-contact.svg" alt=""></a>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
