@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Contato por WhatsApp</title>
+  <desc id="desc">Ícone verde em relevo com telefone branco, inspirado em um botão físico de contato.</desc>
+  <defs>
+    <radialGradient id="g" cx="36%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#39ee69"/>
+      <stop offset=".55" stop-color="#14c94b"/>
+      <stop offset="1" stop-color="#079f36"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffef4"/>
+      <stop offset=".6" stop-color="#eee9dc"/>
+      <stop offset="1" stop-color="#c9c4b9"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    <filter id="inner" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.8" result="b"/>
+      <feOffset dy="2" result="o"/>
+      <feComposite in="o" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="i"/>
+      <feColorMatrix in="i" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .28 0"/>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M22 102 27 88A48 48 0 1 1 42 106Z" fill="url(#rim)"/>
+    <path d="M31 96 35 84A39 39 0 1 1 47 99Z" fill="url(#g)" filter="url(#inner)"/>
+  </g>
+  <path fill="#fffdf4" d="M48 43c2-3 4-4 7-3l7 11c1 2 0 4-2 6l-4 4c4 8 10 14 18 18l4-5c2-2 4-2 6-1l11 7c2 1 3 4 2 7-2 7-8 11-15 11-21 0-52-31-52-52 0-7 4-13 11-15 3-1 5 0 7 2Z"/>
+  <path d="M42 25c-10 6-18 16-21 28" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="4" stroke-linecap="round"/>
+</svg>
