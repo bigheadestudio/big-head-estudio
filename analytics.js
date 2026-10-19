@@ -38,12 +38,23 @@
   document.addEventListener("click", event => {
     const whatsapp = event.target.closest(".js-whatsapp");
     if (whatsapp) {
+      const linkLocation = whatsapp.closest("header") ? "header" :
+        whatsapp.classList.contains("floating-whatsapp") ? "floating_button" :
+        whatsapp.closest("footer") ? "footer" :
+        whatsapp.id === "dayWhatsapp" ? "agenda_day" : "content";
+
       track("whatsapp_click", {
         link_text: (whatsapp.textContent || "").trim().slice(0, 100),
-        link_location: whatsapp.closest("header") ? "header" :
-          whatsapp.classList.contains("floating-whatsapp") ? "floating_button" :
-          whatsapp.closest("footer") ? "footer" :
-          whatsapp.id === "dayWhatsapp" ? "agenda_day" : "content"
+        link_location: linkLocation
+      });
+
+      // Evento recomendado do GA4 para geração de lead.
+      // Mantemos whatsapp_click para diagnóstico e generate_lead como
+      // evento de negócio a ser marcado como evento principal no GA4.
+      track("generate_lead", {
+        lead_source: "whatsapp",
+        lead_context: linkLocation,
+        lead_page: page
       });
       return;
     }
