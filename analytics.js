@@ -49,13 +49,19 @@
       });
 
       // Evento recomendado do GA4 para geração de lead.
-      // Mantemos whatsapp_click para diagnóstico e generate_lead como
-      // evento de negócio a ser marcado como evento principal no GA4.
-      track("generate_lead", {
-        lead_source: "whatsapp",
-        lead_context: linkLocation,
-        lead_page: page
-      });
+      // whatsapp_click mede todos os cliques; generate_lead conta apenas
+      // o primeiro contato por sessão, evitando duplicidade de conversão.
+      const leadSessionKey = "bh_generate_lead_sent";
+      let leadAlreadySent = false;
+      try { leadAlreadySent = sessionStorage.getItem(leadSessionKey) === "1"; } catch (_) {}
+      if (!leadAlreadySent) {
+        track("generate_lead", {
+          lead_source: "whatsapp",
+          lead_context: linkLocation,
+          lead_page: page
+        });
+        try { sessionStorage.setItem(leadSessionKey, "1"); } catch (_) {}
+      }
       return;
     }
 
