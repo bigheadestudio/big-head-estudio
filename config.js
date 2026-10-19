@@ -1,4 +1,5 @@
 window.BIG_HEAD_CONFIG = {
+  googleAnalyticsId: "G-88D4JSN1EW",
   // Endpoint público do Google Apps Script — retorna somente início/fim dos períodos ocupados.
   appsScriptUrl: "https://script.google.com/macros/s/AKfycbz4ZDFteWixpTte4DJJz9e5MqYjVoeyhtKA_mPEhrKGtY6ksNBvzaVNuYyQv7KkLEomJA/exec",
   calendarTimeZone: "America/Sao_Paulo",
